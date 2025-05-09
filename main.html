@@ -10,6 +10,8 @@
 	<script>
 		function secondHighest(arr) {
 
+  let largavalue=Number.MAX_SAFE_INTEGER;
+   console.log(largavalue)
 			
 			if(arr.length<=1)
 			{
@@ -27,20 +29,23 @@
 							second=first;
 							first=arr[i];
 						}
-						else if(arr[i]<first && arr[i]>=second)
+						else if(arr[i]<first && arr[i]>second)
 						{
 							second =arr[i];
 						}
 					}
 				
-			}
+
 			if(first==second)
 			{
 				return -Infinity
 			}
 			return second
+      }
 			
 		}
+
+
 
 		function Main() {
 			var n = prompt("Enter the number of elements");
